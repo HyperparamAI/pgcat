@@ -1031,7 +1031,7 @@ where
 
                     error_response(
                         &mut self.write,
-                        "Your database ran out of GPU concurrency capacity. Please upgrade by logging into your account on https://postgresml.org and increasing your GPU concurrency limit.",
+                        "Timeout Error: Unable to connect to an available GPU Worker within 45 seconds. To handle higher traffic loads, please log into your account and increase the GPU concurrency limit for your database at https://postgresml.org",
                     )
                     .await?;
 
